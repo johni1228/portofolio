@@ -17,7 +17,7 @@
         <span
           class="title text-center"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
-          >portfolio.</span
+          >Portfolio.</span
         >
       </div>
       <hr
@@ -26,7 +26,7 @@
       />
 
       <vue-tabs :activeTextColor="!nightMode ? '#535A5E' : '#dfdfdf'">
-        <v-tab title="development">
+        <v-tab title="Decentralized application">
           <br />
           <div class="row">
             <div
@@ -54,7 +54,7 @@
           </div>
         </v-tab>
 
-        <v-tab title="design">
+        <v-tab title="Web application">
           <div class="row">
             <div
               v-for="(design, idx) in desgin_info"
@@ -100,7 +100,7 @@
                   class="btn-sm btn btn-outline-secondary no-outline"
                   @click.prevent="showDesignModalFn(design)"
                 >
-                  read more
+                  more
                 </button>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default {
   data() {
     return {
       all_info: info.portfolio,
-      desgin_info: info.portfolio_design,
+      desgin_info: info.portfolio_web,
       portfolio_info: [],
       showModal: false,
       showDesignModal: false,

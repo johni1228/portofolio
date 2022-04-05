@@ -7,7 +7,6 @@
       <Skills id="skills" :nightMode="nightMode" />
       <Portfolio id="portfolio" :nightMode="nightMode" />
       <Recommendation :nightMode="nightMode" />
-      <Contact id="contact" :nightMode="nightMode" />
       <Footer :nightMode="nightMode" />
     </div>
   </div>
@@ -20,7 +19,6 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Recommendation from "./components/Recommendation";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 import info from "../info";
@@ -34,7 +32,6 @@ export default {
     Skills,
     Portfolio,
     Recommendation,
-    Contact,
     Footer,
   },
   data() {

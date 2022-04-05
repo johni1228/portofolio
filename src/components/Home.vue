@@ -17,19 +17,12 @@
           <span
             class="home-title"
             :class="{ pgray: !nightMode, 'text-light': nightMode }"
-            >hello there!</span
+            >Hello there!</span
           >
           <div>
             <p v-html="description"></p>
           </div>
           <div class="text-center pb-4">
-            <button
-              class="btn btn-outline-secondary mx-2 "
-              @click="open('linkedin')"
-              v-tooltip.bottom="'LinkedIn'"
-            >
-              <i class="fab fa-linkedin"></i>
-            </button>
             <button
               class="btn btn-outline-secondary mx-2"
               @click="open('github')"
@@ -50,6 +43,20 @@
               v-tooltip.bottom="'Resume'"
             >
               <i class="fa fa-file"></i>
+            </button>
+            <button
+              class="btn btn-outline-secondary mx-2"
+              @click="open('discord')"
+              v-tooltip.bottom="'Discord'"
+            >
+              <i class="fab fa-discord"></i>
+            </button>
+            <button
+              class="btn btn-outline-secondary mx-2"
+              @click="open('telegram')"
+              v-tooltip.bottom="'Telegram'"
+            >
+              <i class="fab fa-telegram"></i>
             </button>
           </div>
         </div>
@@ -78,18 +85,16 @@ export default {
       picture: info.flat_picture,
       description: info.description,
       name: info.name,
-      linkedin: info.links.linkedin,
       github: info.links.github,
       angellist: info.links.angellist,
-      resume: info.links.resume
+      resume: info.links.resume,
+      discord: info.links.discord,
+      telegram: info.links.telegram
     };
   },
   methods: {
     open(link) {
       switch (link) {
-        case "linkedin":
-          window.open(this.linkedin, "_blank");
-          break;
         case "github":
           window.open(this.github, "_blank");
           break;
@@ -98,6 +103,12 @@ export default {
           break;
         case "resume":
           window.open(this.resume, "_blank");
+          break;
+        case "discord":
+          window.open(this.discord, "_blank");
+          break;
+        case "telegram":
+          window.open(this.telegram, "_blank");
           break;
       }
     },
@@ -112,9 +123,7 @@ export default {
 }
 
 img {
-  max-width: 300px;
-  margin-top: 60px;
-  transform: rotateY(180deg);
+  max-width: 600px;
 }
 
 @media only screen and (max-width: 580px) {
